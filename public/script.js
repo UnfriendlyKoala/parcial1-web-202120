@@ -6,10 +6,18 @@ const tbody = document.getElementById('body-table');
 const message = document.getElementById('message');
 
 enterButton.addEventListener('click', (event) => {
-  //Implementar lógica del button submit
-  alert('Implementar lógica del button submit');
-  getresults(123);
-  event.preventDefault();
+  console.log(input.value);
+  respuesta = {valor: input.value};
+
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(respuesta)
+  };
+
+  fetch('/', options);
 });
 
 /**

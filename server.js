@@ -8,6 +8,7 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api', router);
+app.use('/', router);
 
 app.listen(port, () => {
   console.log('Server on http://localhost:3000');
